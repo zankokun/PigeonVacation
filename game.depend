@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1616087796 source:d:\123\game\main.cpp
+1616687384 source:d:\123\game\main.cpp
 	"TileMap.h"
 	"MapManager.h"
 	"Player.h"
+	"StoneManager.h"
 
 1614873113 d:\123\game\tilemap.h
 	<SFML/Graphics.hpp>
@@ -428,10 +429,28 @@
 	"MapManager.h"
 	<fstream>
 
-1616088382 source:d:\123\game\player.cpp
+1616689101 source:d:\123\game\player.cpp
 	"Player.h"
 
-1615739212 d:\123\game\player.h
+1616689086 d:\123\game\player.h
 	<SFML/Graphics.hpp>
 	"MapManager.h"
+	"Stone.h"
+
+1616343477 source:d:\123\game\stone.cpp
+	"Stone.h"
+
+1616685413 d:\123\game\stone.h
+	<SFML/Graphics.hpp>
+	"MapManager.h"
+
+1616689229 source:d:\123\game\stonemanager.cpp
+	"StoneManager.h"
+
+1616689223 d:\123\game\stonemanager.h
+	"Stone.h"
+	"MapManager.h"
+	"Player.h"
+	"SFML/Graphics.hpp"
+	<vector>
 

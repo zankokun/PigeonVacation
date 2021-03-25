@@ -1,9 +1,11 @@
 #include "TileMap.h"
 #include "MapManager.h"
 #include "Player.h"
+#include "StoneManager.h"
 
 int main()
 {
+    srand(time(0));
     /// create the window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Tilemap");
 
@@ -13,6 +15,8 @@ int main()
     }
 
     Player ping("res/ping.png", mapMgr);
+
+    StoneManager stoneMgr("res/rock.png", mapMgr);
 
     /// create the tilemap from the level definition
     TileMap map;
@@ -60,12 +64,24 @@ int main()
             ping.handleEvent(event);
         }
 
+
+
         ping.update(deltaTime, mapMgr);
+        stoneMgr.update(deltaTime, mapMgr);
+
+        if (stoneMgr.check(ping)){
+            /// Game over
+            return 1;
+        }
 
         /// draw the map
         window.clear();
         window.draw(map);
+
         window.draw(ping);
+
+        stoneMgr.draw(window);
+
         window.display();
     }
     return 0;

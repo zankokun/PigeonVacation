@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "MapManager.h"
+#include "Stone.h"
 
 class Player: public sf::Drawable, public sf::Transformable
 {
@@ -18,7 +19,7 @@ private:
 public:
     Player(const std::string & filePath, const MapManager& mapMgr);
     void handleEvent(sf::Event &event);
-
+    bool check(const Stone& stone) const;
     void update(sf::Time &time, MapManager& mapMgr);
 
 };

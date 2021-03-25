@@ -53,6 +53,8 @@
 		<Unit filename="MapManager.h" />
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
+		<Unit filename="Stone.cpp" />
+		<Unit filename="Stone.h" />
 		<Unit filename="TileMap.cpp" />
 		<Unit filename="TileMap.h" />
 		<Unit filename="main.cpp" />

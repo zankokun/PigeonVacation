@@ -13,7 +13,7 @@ Player::Player(const std::string &filePath, const MapManager& mapMgr)
 
     sprite.setPosition(x, y);
     sprite.setOrigin(mapMgr.getBlockSize().x/2,mapMgr.getBlockSize().y/2);
-    speed = sf::Vector2f(mapMgr.getBlockSize());
+    speed = sf::Vector2f(mapMgr.getBlockSize()) * 4.f;
     lookAt = -1;
 }
 
@@ -98,4 +98,9 @@ void Player::update(sf::Time &time, MapManager& mapMgr)
        {
            sprite.move(time.asSeconds() * move_vec * -1.f);
        }
+}
+
+bool Player::check(const Stone& stone) const
+{
+    return sprite.getGlobalBounds().contains(stone.getPosition());
 }

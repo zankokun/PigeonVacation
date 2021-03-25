@@ -2,24 +2,27 @@
 
 Stone::Stone(const std::string &filePath, const MapManager& mapMgr)
 {
-    sf::Image img;
-    if(!img.loadFromFile(filePath)){
+    static sf::Image img;
+    if(img.getSize().x==0){
+       if(!img.loadFromFile(filePath)){
         throw;
+       }
     }
-    img.createMaskFromColor(sf::Color::White);
+    static sf::Texture tex;
+    if(tex.getSize().x==0){
+        tex.loadFromImage(img);
+    }
 
-    texture.loadFromImage(img);
-
-    sprite.setTexture(texture);
+    sprite.setTexture(tex);
     sprite.setTextureRect(sf::IntRect(0,0,mapMgr.getBlockSize().x,mapMgr.getBlockSize().y));
 
     int x = mapMgr.getWidth();
     int y = mapMgr.getHeight();
 
-    sprite.setPosition(mapMgr.getBlockSize().x *(rand()%x), -32);
+    sprite.setPosition(mapMgr.getBlockSize().x *(rand()%x), int(mapMgr.getBlockSize().y) * -1);
     sprite.setOrigin(mapMgr.getBlockSize().x/2,mapMgr.getBlockSize().y/2);
     speed = sf::Vector2f(mapMgr.getBlockSize());
-    dir = sf::Vector2f((float(rand()%1000) / 10.f) - 50.f , 5*32 );    ///  678  0.678  0.345
+    dir = sf::Vector2f((float(rand()%1000) / 10.f) - 50.f , 5*mapMgr.getBlockSize().y );    ///  678  0.678  0.345
 
 }
 

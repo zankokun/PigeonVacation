@@ -25,6 +25,9 @@ StoneManager::StoneManager(const std::string& pathToImage, MapManager& mapMgr)
 {
     fileToStoneImage = pathToImage;
     stones.emplace_back(fileToStoneImage, mapMgr);
+
+    stones.emplace_back(fileToStoneImage, mapMgr);
+    stones.emplace_back(fileToStoneImage, mapMgr);
     stones.emplace_back(fileToStoneImage, mapMgr);
     stones.emplace_back(fileToStoneImage, mapMgr);
     stones.emplace_back(fileToStoneImage, mapMgr);

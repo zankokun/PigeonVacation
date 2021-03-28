@@ -437,17 +437,18 @@
 	"MapManager.h"
 	"Stone.h"
 
-1616692913 source:d:\123\game\stone.cpp
+1616949612 source:d:\123\game\stone.cpp
 	"Stone.h"
 
 1616690998 d:\123\game\stone.h
 	<SFML/Graphics.hpp>
 	"MapManager.h"
 
-1616690551 source:d:\123\game\stonemanager.cpp
+1616948841 source:d:\123\game\stonemanager.cpp
 	"StoneManager.h"
+	<iostream>
 
-1616689223 d:\123\game\stonemanager.h
+1616947331 d:\123\game\stonemanager.h
 	"Stone.h"
 	"MapManager.h"
 	"Player.h"

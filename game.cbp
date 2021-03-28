@@ -55,6 +55,8 @@
 		<Unit filename="Player.h" />
 		<Unit filename="Stone.cpp" />
 		<Unit filename="Stone.h" />
+		<Unit filename="StoneManager.cpp" />
+		<Unit filename="StoneManager.h" />
 		<Unit filename="TileMap.cpp" />
 		<Unit filename="TileMap.h" />
 		<Unit filename="main.cpp" />
